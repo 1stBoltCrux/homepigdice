@@ -42,25 +42,36 @@ $(document).ready(function(){
           totalArray1 = [];
           alert("Player 1, you rolled a one!");
           changePlayer = 2;
+          player.scoreArray1 = [];
+          console.log(totalArray1);
+          console.log(totalArray2);
+          console.log(changePlayer);
+
+        }else if (player.scoreArray1[i] === 1 && changePlayer === 2){
+            totalArray1 = [];
+            alert("Player 2, you rolled a one!");
+            changePlayer = 1;
+            player.scoreArray1 = [];
+            console.log(totalArray1);
+            console.log(totalArray2);
+            console.log(changePlayer);
         } else if (changePlayer === 1){
           total += player.scoreArray1[i];
           totalArray1.push(total);
           player.scoreArray1 = [];
 
           console.log(totalArray1);
-          console.log(total);
-          console.log(changePlayer);
-          console.log(player.scoreArray1);
-        } else if (player.scoreArray1[i] === 1 && changePlayer === 2){
-          totalArray1 = [];
-          alert("Player 2, you rolled a one!");
-          changePlayer = 1;
           console.log(totalArray2);
-        } else {
+          console.log(changePlayer);
+          // console.log(player.scoreArray1);
+
+        }  else {
           total += player.scoreArray1[i];
           totalArray2.push(total);
           player.scoreArray1 = [];
+          console.log(totalArray1);
           console.log(totalArray2);
+          console.log(changePlayer);
         }
 
         }
